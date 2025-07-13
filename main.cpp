@@ -224,11 +224,6 @@ pair<vector<vertice>, long long> dsatur(int caso){
                 }
             }
     }
-    /*
-    if (indice_maior_grau== -1){
-        indice_maior_grau = 0;
-    }
-    */
     grafo[indice_maior_grau].set_cor(menor_cor(grafo, indice_maior_grau));
     vertices_coloridos.push_back(indice_maior_grau);
     vertices_nao_coloridos.erase(vertices_nao_coloridos.begin() + get_indice_to_remove(vertices_nao_coloridos, indice_maior_grau));
