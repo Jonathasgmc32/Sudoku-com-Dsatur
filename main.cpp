@@ -209,7 +209,6 @@ pair<vector<vertice>, long long> dsatur(int caso){
         else{
             vertices_coloridos.push_back(grafo[i].get_id_vertice());
         }
-        // cout<<indice_maior_grau << endl;
     }
     for(int i = 0; i < vertices_nao_coloridos.size(); i++){
             if (indice_maior_grau == -1){
