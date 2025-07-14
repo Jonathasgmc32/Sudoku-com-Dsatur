@@ -41,7 +41,7 @@ void salva_em_arquivo(int caso, vector<vertice> grafo, long long tempo){
             nome_arquivo = nome_arquivo + "difficult_" + to_string((caso - 1) % 10 + 1);
         }
     }
-    else{
+    else if (caso < 61){
         nome_arquivo = nome_arquivo + "sudoku9x9_";
         if(caso < 41){
             nome_arquivo = nome_arquivo + "easy_" + to_string((caso - 1) % 10 + 1);
@@ -50,6 +50,12 @@ void salva_em_arquivo(int caso, vector<vertice> grafo, long long tempo){
             nome_arquivo = nome_arquivo + "medium_" + to_string((caso - 1) % 10 + 1);
         } else{
             nome_arquivo = nome_arquivo + "difficult_" + to_string((caso - 1) % 10 + 1);
+        }
+    }
+    else{
+        if(caso < 71){
+            nome_arquivo = nome_arquivo + "sudoku16x16_";
+            nome_arquivo = nome_arquivo + "easy_" + to_string((caso - 1) % 10 + 1);
         }
     }
     nome_arquivo = nome_arquivo + "_resultado.txt";
@@ -90,7 +96,7 @@ vector<int> ler_arquivo(int caso){
             nome_arquivo = nome_arquivo + "difficult_" + to_string((caso - 1) % 10 + 1);
         }
     }
-    else{
+    else if (caso < 61){
         nome_arquivo = nome_arquivo + "sudoku9x9_";
         if(caso < 41){
             nome_arquivo = nome_arquivo + "easy_" + to_string((caso - 1) % 10 + 1);
@@ -99,6 +105,12 @@ vector<int> ler_arquivo(int caso){
             nome_arquivo = nome_arquivo + "medium_" + to_string((caso - 1) % 10 + 1);
         } else{
             nome_arquivo = nome_arquivo + "difficult_" + to_string((caso - 1) % 10 + 1);
+        }
+    }
+    else{
+        if(caso < 71){
+            nome_arquivo = nome_arquivo + "sudoku16x16_";
+            nome_arquivo = nome_arquivo + "easy_" + to_string((caso - 1) % 10 + 1);
         }
     }
     nome_arquivo = nome_arquivo + ".txt";
@@ -273,17 +285,18 @@ int main(){
 
         if (opcaoMenu == 1) {
             int numeroCaso;
-            cout << "Os casos testes estão separados nas categorias 4x4 e 9x9, onde: " << endl;
+            cout << "Os casos testes estão separados nas categorias 4x4, 9x9 e 16x16, onde: " << endl;
             cout << "4x4 fácil: casos de 1 a 10" << endl;
             cout << "4x4 médio: casos de 11 a 20" << endl;
             cout << "4x4 díficil: casos de 21 a 30" << endl;
             cout << "9x9 fácil: casos de 31 a 40" << endl;
             cout << "9x9 médio: casos de 41 a 50" << endl;
             cout << "9x9 díficil: casos de 51 a 60" << endl;
-            cout << "Selecione um caso de 1 a 60:" << endl;
+            cout << "16x16 fácil: casos de 61 a 70" << endl;
+            cout << "Selecione um caso de 1 a 70:" << endl;
             cin >> numeroCaso;
 
-            if (numeroCaso < 1 || numeroCaso > 60) {
+            if (numeroCaso < 1 || numeroCaso > 70) {
                 cout << "O caso selecionado é invalido! Retornando ao menu." << endl;
                 continue;
             }
