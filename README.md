@@ -1,0 +1,6 @@
+- Recomendado sistema Linux para esxecução
+- Abra o terminal, e compile o projeto usando o comando g++ main.cpp vertice.cpp -o nome-do-programa
+- Use o comando ./nome-do-programa para executar o programa compilado.
+- Ao abrir, digite 1 para ir ao menu de seleção de caso de testes, ou 2 para encerrar
+- No menu de caso de testes, selecione um caso de 1 a 70. Cada cadacterística do caso é indicada no sistema
+- Após selecionar o caso, e ele ser calculado, poderá selecionar (1) para mostrar no terminal o resultado, ou (2) para salvar em um arquivo .txt
